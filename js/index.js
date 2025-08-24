@@ -260,9 +260,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     /* ====================================================
+       AOS INITIALIZATION
+       ==================================================== */
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true,
+            mirror: false,
+            offset: 50,
+            delay: 0,
+            anchorPlacement: 'top-bottom'
+        });
+        
+        // Refresh AOS on window resize
+        window.addEventListener('resize', function() {
+            AOS.refresh();
+        });
+        
+        console.log('🎯 AOS Animations Initialized Successfully!');
+    } else {
+        console.warn('⚠️ AOS library not loaded');
+    }
+    
+    /* ====================================================
        INITIALIZE COMPLETE
        ==================================================== */
-    
+    console.log('🎮 Maltas Esports Community - All Systems Loaded!');
 });
 
 /* ====================================================
