@@ -32,178 +32,139 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index-responsif.css">
     
     <title>Maltas Esports Community</title>
 
 </head>
 <body>
     <!-- Marquee Gaming Esports -->
-    <div class="marquee-container">
-        <div class="marquee-wrapper">
-            <div class="marquee-text">
-                Mobile Legends • Free Fire • eFootball • Honor of Kings • PUBG Mobile • Mobile Legends • Free Fire • eFootball • Honor of Kings • PUBG Mobile • Mobile Legends • Free Fire • eFootball • Honor of Kings • PUBG Mobile
-            </div>
-            <div class="marquee-text">
-                Mobile Legends • Free Fire • eFootball • Honor of Kings • PUBG Mobile • Mobile Legends • Free Fire • eFootball • Honor of Kings • PUBG Mobile • Mobile Legends • Free Fire • eFootball • Honor of Kings • PUBG Mobile
-            </div>
+    <div class="w-full overflow-hidden bg-transparent border-b border-blue-500/20 py-3 animate-slide-down">
+        <div class="animate-marquee text-sm font-bold text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text uppercase tracking-wider" style="font-family: 'Orbitron', monospace;">
+            Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings • Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings • Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings
         </div>
     </div>
 
     <!-- Navigation Bar -->
-    <nav class="nav-container" data-aos="fade-down" data-aos-duration="800">
-        <div class="nav-wrapper">
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-xl border-b border-blue-500/20 py-3 shadow-lg animate-slide-down animation-delay-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
             <!-- Logo & Brand -->
-            <div class="nav-brand" data-aos="fade-right" data-aos-delay="200">
-                <div class="brand-logo">
-                    <img src="img/element/logo/Logo.png" alt="Maltas Esports" class="logo-img">
+                <div class="flex items-center gap-4 animate-slide-left animation-delay-400">
+                    <div class="relative group">
+                        <img src="img/element/logo/Logo.png" alt="Maltas Esports" 
+                             class="w-12 h-12 object-contain rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 drop-shadow-lg">
                 </div>
-                <div class="brand-text">
-                    <h1 class="brand-name">Maltas Esports</h1>
-                    <p class="brand-tagline">Unite. Compete. Conquer.</p>
+                    <div class="flex flex-col">
+                        <h1 class="text-xl font-black text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text hover:scale-105 transition-transform duration-300 cursor-pointer" 
+                            style="font-family: 'Orbitron', monospace;">
+                            Maltas Esports
+                        </h1>
+                        <p class="text-xs text-gray-400 uppercase tracking-wide font-medium hover:text-blue-400 transition-colors duration-300">
+                            Mallusetasi Ko'e
+                        </p>
                 </div>
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" data-aos="fade-left" data-aos-delay="200">
-                <i class='bx bx-menu'></i>
+                <button id="mobileMenuToggle" 
+                        class="md:hidden flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white hover:from-blue-500 hover:to-blue-600 transition-all duration-300 hover:scale-110 active:scale-95 animate-fade-up animation-delay-800 z-50">
+                    <i class='bx bx-menu text-2xl'></i>
             </button>
 
-            <!-- Navigation Menu -->
-            <div class="nav-menu" id="navMenu" data-aos="fade-left" data-aos-delay="400">
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">
-                        <i class='bx bx-home-alt'></i>
+                <!-- Desktop Navigation Menu -->
+                <div class="hidden md:flex items-center gap-8 animate-slide-right animation-delay-600">
+                    <!-- Navigation Links -->
+                    <ul class="flex items-center gap-2">
+                        <li class="animate-fade-up animation-delay-800">
+                            <a href="#home" class="nav-link-active flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                                <i class='bx bx-home-alt text-lg'></i>
                         <span>Beranda</span>
-                    </a></li>
-                    <li><a href="#about" class="nav-link">
-                        <i class='bx bx-info-circle'></i>
+                            </a>
+                        </li>
+                        <li class="animate-fade-up animation-delay-900">
+                            <a href="#about" class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
+                                <i class='bx bx-info-circle text-lg'></i>
                         <span>Tentang Kami</span>
-                    </a></li>
-                    <li><a href="#tournaments" class="nav-link">
-                        <i class='bx bx-trophy'></i>
+                            </a>
+                        </li>
+                        <li class="animate-fade-up animation-delay-1000">
+                            <a href="#tournaments" class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
+                                <i class='bx bx-trophy text-lg'></i>
                         <span>Turnamen</span>
-                    </a></li>
-                    <li><a href="#contact" class="nav-link">
-                        <i class='bx bx-phone'></i>
+                            </a>
+                        </li>
+                        <li class="animate-fade-up animation-delay-1100">
+                            <a href="#contact" class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
+                                <i class='bx bx-phone text-lg'></i>
                         <span>Kontak</span>
-                    </a></li>
+                            </a>
+                        </li>
                 </ul>
 
                 <!-- Social Media Buttons -->
-                <div class="social-buttons">
-                    <a href="https://www.instagram.com/maltasesport_community/" target="_blank" class="social-btn instagram-btn" data-aos="zoom-in" data-aos-delay="600">
-                        <i class='bx bxl-instagram'></i>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.instagram.com/maltasesport_community/" target="_blank" 
+                           class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 animate-slide-right animation-delay-1200">
+                            <i class='bx bxl-instagram text-lg'></i>
+                            <span class="hidden lg:block">Instagram</span>
+                        </a>
+                        <a href="https://chat.whatsapp.com/HjXD42aMPJz8K2YyiNCfJH?mode=ac_t&fbclid=PAZXh0bgNhZW0CMTEAAacfS89LfuwxN5sMbHcMcu3GtcVuLQxE8oAwXsOoYVcHK-skJsmGU-qctrrUKQ_aem_q2HR0dh5lUDrXIGmzB6Dqg" target="_blank" 
+                           class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 animate-slide-right animation-delay-1300">
+                            <i class='bx bxl-whatsapp text-lg'></i>
+                            <span class="hidden lg:block">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Menu -->
+                <div id="navMenu" class="fixed top-0 left-0 w-screen h-screen bg-slate-900/98 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 transform translate-x-full transition-all duration-500 ease-in-out md:hidden">
+                    <ul class="flex flex-col items-center gap-6">
+                        <li>
+                            <a href="#home" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:scale-105">
+                                <i class='bx bx-home-alt text-2xl'></i>
+                                <span>Beranda</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
+                                <i class='bx bx-info-circle text-2xl'></i>
+                                <span>Tentang Kami</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tournaments" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
+                                <i class='bx bx-trophy text-2xl'></i>
+                                <span>Turnamen</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
+                                <i class='bx bx-phone text-2xl'></i>
+                                <span>Kontak</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile Social Media Buttons -->
+                    <div class="flex flex-col items-center gap-4">
+                        <a href="https://www.instagram.com/maltasesport_community/" target="_blank" 
+                           class="flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-bold text-lg min-w-48 justify-center transition-all duration-300 hover:scale-105">
+                            <i class='bx bxl-instagram text-2xl'></i>
                         <span>Instagram</span>
                     </a>
-                    <a href="https://chat.whatsapp.com/HjXD42aMPJz8K2YyiNCfJH?mode=ac_t&fbclid=PAZXh0bgNhZW0CMTEAAacfS89LfuwxN5sMbHcMcu3GtcVuLQxE8oAwXsOoYVcHK-skJsmGU-qctrrUKQ_aem_q2HR0dh5lUDrXIGmzB6Dqg" target="_blank" class="social-btn whatsapp-btn" data-aos="zoom-in" data-aos-delay="700">
-                        <i class='bx bxl-whatsapp'></i>
+                        <a href="https://chat.whatsapp.com/HjXD42aMPJz8K2YyiNCfJH?mode=ac_t&fbclid=PAZXh0bgNhZW0CMTEAAacfS89LfuwxN5sMbHcMcu3GtcVuLQxE8oAwXsOoYVcHK-skJsmGU-qctrrUKQ_aem_q2HR0dh5lUDrXIGmzB6Dqg" target="_blank" 
+                           class="flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-lg min-w-48 justify-center transition-all duration-300 hover:scale-105">
+                            <i class='bx bxl-whatsapp text-2xl'></i>
                         <span>WhatsApp</span>
                     </a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-container">
-            <!-- Left Character Image -->
-            <div class="hero-character-left" data-aos="fade-right" data-aos-delay="300">
-                <img src="https://placehold.co/400x600/1a1a2e/ffd700?text=Mobile+Legends+Hero" alt="Mobile Legends Character" class="character-img">
-                <div class="character-glow"></div>
-            </div>
-
-            <!-- Center Content -->
-            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-                <!-- Welcome Section -->
-                <div class="welcome-section">
-                    <h1 class="hero-title">Selamat Datang di</h1>
-                    <h2 class="hero-brand">Maltas Esports Community</h2>
-                    <p class="hero-description">Bergabunglah dengan komunitas gaming terbesar di Indonesia. Unite, Compete, dan Conquer bersama kami!</p>
-                </div>
-
-                <!-- Time and Location Section -->
-                <div class="time-location-section">
-                    <div class="current-time">
-                        <div class="time-display">
-                            <span class="time-label">Waktu Saat Ini:</span>
-                            <span id="currentTime" class="time-value">--:--:--</span>
-                            <span id="timeZone" class="timezone-label">WIB</span>
-                        </div>
-                        <div class="location-status">
-                            <i class='bx bx-map'></i>
-                            <span id="locationStatus">Mendeteksi lokasi...</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Calendar Section -->
-                <div class="calendar-section">
-                    <div class="calendar-header">
-                        <h3 class="calendar-title">Kalender Turnamen</h3>
-                        <div class="calendar-nav">
-                            <button id="prevMonth" class="calendar-btn"><i class='bx bx-chevron-left'></i></button>
-                            <span id="currentMonth" class="month-year">Januari 2024</span>
-                            <button id="nextMonth" class="calendar-btn"><i class='bx bx-chevron-right'></i></button>
-                        </div>
-                    </div>
-                    <div id="miniCalendar" class="mini-calendar"></div>
-                </div>
-
-                <!-- Image Carousel Section -->
-                <div class="carousel-section">
-                    <div class="carousel-header">
-                        <h3 class="carousel-title">Galeri Turnamen</h3>
-                    </div>
-                    <div class="image-carousel">
-                        <div class="carousel-track" id="carouselTrack">
-                            <div class="carousel-slide">
-                                <img src="https://placehold.co/300x200/1a1a2e/ffd700?text=Tournament+1" alt="Tournament 1">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="https://placehold.co/300x200/1a1a2e/ff6b35?text=Tournament+2" alt="Tournament 2">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="https://placehold.co/300x200/1a1a2e/00d4aa?text=Tournament+3" alt="Tournament 3">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="https://placehold.co/300x200/1a1a2e/ff3838?text=Tournament+4" alt="Tournament 4">
-                            </div>
-                        </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev" id="carouselPrev"><i class='bx bx-chevron-left'></i></button>
-                            <button class="carousel-btn next" id="carouselNext"><i class='bx bx-chevron-right'></i></button>
-                        </div>
-                        <div class="carousel-indicators" id="carouselIndicators"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Character Image -->
-            <div class="hero-character-right" data-aos="fade-left" data-aos-delay="300">
-                <img src="https://placehold.co/400x600/1a1a2e/ff6b35?text=Free+Fire+Hero" alt="Free Fire Character" class="character-img">
-                <div class="character-glow"></div>
-            </div>
-        </div>
-
-        <!-- Location Permission Modal -->
-        <div id="locationModal" class="location-modal hidden">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class='bx bx-map-pin'></i>
-                    <h3>Izinkan Akses Lokasi</h3>
-                </div>
-                <div class="modal-body">
-                    <p>Kami memerlukan akses lokasi untuk menampilkan waktu yang sesuai dengan zona waktu Anda (WIB, WITA, atau WIT).</p>
-                </div>
-                <div class="modal-actions">
-                    <button id="allowLocation" class="btn-primary">Izinkan</button>
-                    <button id="denyLocation" class="btn-secondary">Tidak Sekarang</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+  
     <!-- JavaScript Libraries -->
     <!-- AOS - Animate On Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -1,0 +1,168 @@
+/* ====================================================
+   MALTAS ESPORTS COMMUNITY - RESPONSIVE STYLES
+   Minimal Custom CSS untuk Mobile
+   ==================================================== */
+
+/* ====================================================
+   MOBILE SPECIFIC STYLES
+   ==================================================== */
+@media (max-width: 768px) {
+    /* Marquee Mobile Speed */
+    .animate-marquee {
+        animation-duration: 20s;
+        -webkit-animation-duration: 20s;
+        -moz-animation-duration: 20s;
+        -o-animation-duration: 20s;
+    }
+    
+    /* Mobile Menu Animation States */
+    #navMenu {
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform: translateX(100%) !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+    
+    #navMenu.mobile-menu-active {
+        transform: translateX(0) !important;
+    }
+    
+    #navMenu.translate-x-0 {
+        transform: translateX(0) !important;
+    }
+    
+    #navMenu.translate-x-full {
+        transform: translateX(100%) !important;
+    }
+    
+    /* Mobile Link Animations */
+    .mobile-nav-link {
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    #navMenu.mobile-menu-active .mobile-nav-link {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    #navMenu.mobile-menu-active .mobile-nav-link:nth-child(1) { transition-delay: 0.1s; }
+    #navMenu.mobile-menu-active .mobile-nav-link:nth-child(2) { transition-delay: 0.2s; }
+    #navMenu.mobile-menu-active .mobile-nav-link:nth-child(3) { transition-delay: 0.3s; }
+    #navMenu.mobile-menu-active .mobile-nav-link:nth-child(4) { transition-delay: 0.4s; }
+}
+
+/* ====================================================
+   SMALL MOBILE DEVICES
+   ==================================================== */
+@media (max-width: 480px) {
+    .animate-marquee {
+        animation-duration: 18s;
+        -webkit-animation-duration: 18s;
+        -moz-animation-duration: 18s;
+        -o-animation-duration: 18s;
+        font-size: 0.75rem;
+    }
+}
+
+/* ====================================================
+   LANDSCAPE MOBILE ORIENTATION
+   ==================================================== */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 768px) {
+    #navMenu {
+        padding: 1rem 0 !important;
+        justify-content: flex-start !important;
+        overflow-y: auto !important;
+        gap: 1rem !important;
+    }
+    
+    #navMenu ul {
+        margin-top: 3rem !important;
+        gap: 0.75rem !important;
+    }
+    
+    #navMenu .mobile-nav-link {
+        padding: 0.5rem 1.5rem !important;
+        font-size: 0.875rem !important;
+        min-width: 8rem !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center.gap-4 {
+        gap: 0.5rem !important;
+        margin-top: 1rem !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center.gap-4 a {
+        padding: 0.5rem 1.5rem !important;
+        font-size: 0.875rem !important;
+        min-width: 8rem !important;
+    }
+}
+
+/* ====================================================
+   HIGH RESOLUTION DISPLAYS
+   ==================================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ====================================================
+   PRINT STYLES
+   ==================================================== */
+@media print {
+    .animate-marquee,
+    #navMenu,
+    .social-buttons {
+        display: none !important;
+    }
+    
+    nav {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* ====================================================
+   REDUCED MOTION PREFERENCES
+   ==================================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ====================================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ==================================================== */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link,
+    .mobile-nav-link,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ====================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ==================================================== */
+@media (prefers-contrast: high) {
+    nav {
+        border-bottom: 2px solid rgb(59, 130, 246) !important;
+    }
+    
+    .nav-link,
+    .mobile-nav-link {
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+}
