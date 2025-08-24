@@ -260,6 +260,129 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     /* ====================================================
+       HERO SECTION FUNCTIONALITY
+       ==================================================== */
+    
+    // Date and Time Display
+    function updateDateTime() {
+        const now = new Date();
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+        };
+        
+        const timeOptions = {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false,
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+        };
+        
+        const dateElement = document.getElementById('currentDate');
+        const timeElement = document.getElementById('currentTime');
+        
+        if (dateElement && timeElement) {
+            dateElement.textContent = now.toLocaleDateString('id-ID', options);
+            timeElement.textContent = now.toLocaleTimeString('id-ID', timeOptions);
+        }
+    }
+    
+    // Update time every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+    
+    // Hero Carousel Functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const prevButton = document.getElementById('prevSlide');
+    const nextButton = document.getElementById('nextSlide');
+    
+    console.clear();
+    console.log('🎯 CAROUSEL DEBUG INFO - 3 SLIDES:');
+    console.log('Number of slides detected:', slides.length);
+    console.log('Number of indicators detected:', indicators.length);
+    console.log('Expected: 3 slides, 3 indicators');
+    console.log('Slides:', slides);
+    console.log('Indicators:', indicators);
+
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.transform = 'translateX(0%)';
+            } else if (i < index) {
+                slide.style.transform = 'translateX(-100%)';
+            } else {
+                slide.style.transform = 'translateX(100%)';
+            }
+        });
+        
+        indicators.forEach((indicator, i) => {
+            if (i === index) {
+                indicator.classList.remove('bg-white/40');
+                indicator.classList.add('bg-white/80');
+            } else {
+                indicator.classList.remove('bg-white/80');
+                indicator.classList.add('bg-white/40');
+            }
+        });
+        
+        currentSlide = index;
+    }
+    
+    function nextSlide() {
+        const next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }
+    
+    function prevSlide() {
+        const prev = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prev);
+    }
+    
+    // Event listeners for carousel
+    if (nextButton) {
+        nextButton.addEventListener('click', nextSlide);
+    }
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', prevSlide);
+    }
+    
+    // Indicator event listeners
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Initialize first slide
+    showSlide(0);
+    
+    // Auto-play carousel
+    let carouselInterval = setInterval(nextSlide, 5000);
+    
+    // Pause auto-play on hover
+    const carouselContainer = document.getElementById('heroCarousel');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(carouselInterval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(nextSlide, 5000);
+        });
+    }
+    
+    // Initialize first slide
+    if (slides.length > 0) {
+        showSlide(0);
+    }
+    
+    /* ====================================================
        AOS INITIALIZATION
        ==================================================== */
     // Initialize AOS (Animate On Scroll)

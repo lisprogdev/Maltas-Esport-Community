@@ -1,146 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/element/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/element/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/element/favicon/favicon-16x16.png">
-    <link rel="shortcut icon" href="img/element/favicon/favicon.ico">
-    <link rel="manifest" href="img/element/favicon/site.webmanifest">
-    
-     <!-- Tailwind CSS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/element/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/element/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/element/favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="img/element/favicon/favicon.ico" />
+    <link rel="manifest" href="img/element/favicon/site.webmanifest" />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Google Fonts - Gaming Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Box Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <!-- AOS - Animate On Scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- FullCalendar CSS -->
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css' rel='stylesheet' />
-    
-    <!-- ApexCharts CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/index-responsif.css">
-    
-    <title>Maltas Esports Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
 
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet" />
+
+    <!-- ApexCharts CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index-responsif.css" />
+
+    <title>Maltas Esports Community</title>
 </head>
+
 <body>
     <!-- Marquee Gaming Esports -->
-    <div class="w-full overflow-hidden bg-transparent border-b border-blue-500/20 py-3" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
-        <div class="animate-marquee text-sm font-bold text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text uppercase tracking-wider" style="font-family: 'Orbitron', monospace;">
-            Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings • Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings • Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings
+    <div class="w-full overflow-hidden bg-transparent border-b border-blue-500/20 py-3" data-aos="fade-down"
+        data-aos-duration="800" data-aos-delay="100">
+        <div class="animate-marquee text-sm font-bold text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text uppercase tracking-wider"
+            style="font-family: 'Orbitron', monospace">
+            Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings •
+            Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings •
+            Mobile Legends • Free Fire • PUBG Mobile • eFootball • Honor of Kings
         </div>
     </div>
 
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-xl border-b border-blue-500/20 py-3 shadow-lg" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-xl border-b border-blue-500/20 py-3 shadow-lg"
+        data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
-            <!-- Logo & Brand -->
-                <div class="flex items-center gap-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-4" data-aos="fade-right" data-aos-duration="1000"
+                    data-aos-delay="500">
                     <div class="relative group">
-                        <img src="img/element/logo/Logo.png" alt="Maltas Esports" 
-                             class="w-12 h-12 object-contain rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 drop-shadow-lg">
-                </div>
+                        <img src="img/element/logo/Logo.png" alt="Maltas Esports"
+                            class="w-12 h-12 object-contain rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 drop-shadow-lg" />
+                    </div>
                     <div class="flex flex-col">
-                        <h1 class="text-xl font-black text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text hover:scale-105 transition-transform duration-300 cursor-pointer" 
-                            style="font-family: 'Orbitron', monospace;">
+                        <h1 class="text-xl font-black text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            style="font-family: 'Orbitron', monospace">
                             Maltas Esports
                         </h1>
-                        <p class="text-xs text-gray-400 uppercase tracking-wide font-medium hover:text-blue-400 transition-colors duration-300">
+                        <p
+                            class="text-xs text-gray-400 uppercase tracking-wide font-medium hover:text-blue-400 transition-colors duration-300">
                             Mallusetasi Ko'e
                         </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Mobile Menu Toggle -->
-                <button id="mobileMenuToggle" 
-                        class="md:hidden flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white hover:from-blue-500 hover:to-blue-600 transition-all duration-300 hover:scale-110 active:scale-95 z-50" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
-                    <i class='bx bx-menu text-2xl'></i>
-            </button>
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuToggle"
+                    class="md:hidden flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white hover:from-blue-500 hover:to-blue-600 transition-all duration-300 hover:scale-110 active:scale-95 z-50"
+                    data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
+                    <i class="bx bx-menu text-2xl"></i>
+                </button>
 
                 <!-- Desktop Navigation Menu -->
-                <div class="hidden md:flex items-center gap-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                <div class="hidden md:flex items-center gap-8" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="600">
                     <!-- Navigation Links -->
                     <ul class="flex items-center gap-2">
                         <li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
-                            <a href="#home" class="nav-link-active flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                                <i class='bx bx-home-alt text-lg'></i>
-                        <span>Beranda</span>
+                            <a href="#home"
+                                class="nav-link-active flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                                <i class="bx bx-home-alt text-lg"></i>
+                                <span>Beranda</span>
                             </a>
                         </li>
                         <li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">
-                            <a href="#about" class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
-                                <i class='bx bx-info-circle text-lg'></i>
-                        <span>Tentang Kami</span>
+                            <a href="#about"
+                                class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
+                                <i class="bx bx-info-circle text-lg"></i>
+                                <span>Tentang Kami</span>
                             </a>
                         </li>
                         <li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1000">
-                            <a href="#tournaments" class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
-                                <i class='bx bx-trophy text-lg'></i>
-                        <span>Turnamen</span>
+                            <a href="#tournaments"
+                                class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
+                                <i class="bx bx-trophy text-lg"></i>
+                                <span>Turnamen</span>
                             </a>
                         </li>
                         <li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1100">
-                            <a href="#contact" class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
-                                <i class='bx bx-phone text-lg'></i>
-                        <span>Kontak</span>
+                            <a href="#contact"
+                                class="nav-link flex items-center gap-2 px-4 py-2 rounded-xl text-white font-semibold uppercase text-sm tracking-wide transition-all duration-300 hover:bg-blue-600/20 hover:text-blue-400 hover:scale-105">
+                                <i class="bx bx-phone text-lg"></i>
+                                <span>Kontak</span>
                             </a>
                         </li>
-                </ul>
+                    </ul>
 
-                <!-- Social Media Buttons -->
+                    <!-- Social Media Buttons -->
                     <div class="flex items-center gap-3">
-                        <a href="https://www.instagram.com/maltasesport_community/" target="_blank" 
-                           class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="1200">
-                            <i class='bx bxl-instagram text-lg'></i>
+                        <a href="https://www.instagram.com/maltasesport_community/" target="_blank"
+                            class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25"
+                            data-aos="flip-left" data-aos-duration="1000" data-aos-delay="1200">
+                            <i class="bx bxl-instagram text-lg"></i>
                             <span class="hidden lg:block">Instagram</span>
                         </a>
-                        <a href="https://chat.whatsapp.com/HjXD42aMPJz8K2YyiNCfJH?mode=ac_t&fbclid=PAZXh0bgNhZW0CMTEAAacfS89LfuwxN5sMbHcMcu3GtcVuLQxE8oAwXsOoYVcHK-skJsmGU-qctrrUKQ_aem_q2HR0dh5lUDrXIGmzB6Dqg" target="_blank" 
-                           class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="1300">
-                            <i class='bx bxl-whatsapp text-lg'></i>
+                        <a href="https://chat.whatsapp.com/HjXD42aMPJz8K2YyiNCfJH?mode=ac_t&fbclid=PAZXh0bgNhZW0CMTEAAacfS89LfuwxN5sMbHcMcu3GtcVuLQxE8oAwXsOoYVcHK-skJsmGU-qctrrUKQ_aem_q2HR0dh5lUDrXIGmzB6Dqg"
+                            target="_blank"
+                            class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
+                            data-aos="flip-right" data-aos-duration="1000" data-aos-delay="1300">
+                            <i class="bx bxl-whatsapp text-lg"></i>
                             <span class="hidden lg:block">WhatsApp</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Mobile Navigation Menu -->
-                <div id="navMenu" class="fixed top-0 left-0 w-screen h-screen bg-slate-900/98 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 transform translate-x-full transition-all duration-500 ease-in-out md:hidden">
+                <div id="navMenu"
+                    class="fixed top-0 left-0 w-screen h-screen bg-slate-900/98 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 transform translate-x-full transition-all duration-500 ease-in-out md:hidden">
                     <ul class="flex flex-col items-center gap-6">
                         <li>
-                            <a href="#home" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:scale-105">
-                                <i class='bx bx-home-alt text-2xl'></i>
+                            <a href="#home"
+                                class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:scale-105">
+                                <i class="bx bx-home-alt text-2xl"></i>
                                 <span>Beranda</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#about" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
-                                <i class='bx bx-info-circle text-2xl'></i>
+                            <a href="#about"
+                                class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
+                                <i class="bx bx-info-circle text-2xl"></i>
                                 <span>Tentang Kami</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#tournaments" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
-                                <i class='bx bx-trophy text-2xl'></i>
+                            <a href="#tournaments"
+                                class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
+                                <i class="bx bx-trophy text-2xl"></i>
                                 <span>Turnamen</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
-                                <i class='bx bx-phone text-2xl'></i>
+                            <a href="#contact"
+                                class="mobile-nav-link flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 text-white font-bold text-lg uppercase tracking-wide min-w-48 justify-center transition-all duration-300 hover:bg-blue-600/20 hover:scale-105">
+                                <i class="bx bx-phone text-2xl"></i>
                                 <span>Kontak</span>
                             </a>
                         </li>
@@ -148,35 +172,357 @@
 
                     <!-- Mobile Social Media Buttons -->
                     <div class="flex flex-col items-center gap-4">
-                        <a href="https://www.instagram.com/maltasesport_community/" target="_blank" 
-                           class="flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-bold text-lg min-w-48 justify-center transition-all duration-300 hover:scale-105">
-                            <i class='bx bxl-instagram text-2xl'></i>
-                        <span>Instagram</span>
-                    </a>
-                        <a href="https://chat.whatsapp.com/HjXD42aMPJz8K2YyiNCfJH?mode=ac_t&fbclid=PAZXh0bgNhZW0CMTEAAacfS89LfuwxN5sMbHcMcu3GtcVuLQxE8oAwXsOoYVcHK-skJsmGU-qctrrUKQ_aem_q2HR0dh5lUDrXIGmzB6Dqg" target="_blank" 
-                           class="flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-lg min-w-48 justify-center transition-all duration-300 hover:scale-105">
-                            <i class='bx bxl-whatsapp text-2xl'></i>
-                        <span>WhatsApp</span>
-                    </a>
+                        <a href="https://www.instagram.com/maltasesport_community/" target="_blank"
+                            class="flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-bold text-lg min-w-48 justify-center transition-all duration-300 hover:scale-105">
+                            <i class="bx bxl-instagram text-2xl"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://chat.whatsapp.com/HjXD42aMPJz8K2YyiNCfJH?mode=ac_t&fbclid=PAZXh0bgNhZW0CMTEAAacfS89LfuwxN5sMbHcMcu3GtcVuLQxE8oAwXsOoYVcHK-skJsmGU-qctrrUKQ_aem_q2HR0dh5lUDrXIGmzB6Dqg"
+                            target="_blank"
+                            class="flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-lg min-w-48 justify-center transition-all duration-300 hover:scale-105">
+                            <i class="bx bxl-whatsapp text-2xl"></i>
+                            <span>WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-  
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style="
+          background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        "></div>
+
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-transparent"></div>
+
+        <!-- Content Container -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+                <!-- Left Side - Welcome Content -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                    <!-- Date & Time Badge -->
+                    <div class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3"
+                        data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+                        <i class="bx bx-calendar text-blue-400 text-xl"></i>
+                        <div class="flex flex-col text-sm">
+                            <span id="currentDate" class="text-white font-medium"></span>
+                            <span id="currentTime" class="text-blue-300 font-mono"></span>
+                        </div>
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    </div>
+
+                    <!-- Main Title -->
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-7xl font-black text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text leading-tight"
+                            style="font-family: 'Orbitron', monospace" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="600">
+                            SELAMAT DATANG
+                        </h1>
+                        <h2 class="text-2xl lg:text-4xl font-bold text-white leading-relaxed" data-aos="fade-up"
+                            data-aos-duration="1000" data-aos-delay="800">
+                            Di
+                            <span
+                                class="text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text">Maltas
+                                Esports Community</span>
+                        </h2>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl" data-aos="fade-up"
+                        data-aos-duration="1000" data-aos-delay="1000">
+                        Bergabunglah dengan komunitas esports terdepan di Indonesia.
+                        Rasakan pengalaman gaming yang tak terlupakan bersama para
+                        champion dan gamers profesional.
+                    </p>
+
+                    <!-- Est. Badge -->
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm border border-yellow-500/30 rounded-full px-4 py-2"
+                        data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200">
+                        <i class="bx bx-crown text-yellow-400 text-lg"></i>
+                        <span class="text-yellow-300 font-semibold text-sm uppercase tracking-wide">Established
+                            2023</span>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-4" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="1400">
+                        <a href="#tournaments"
+                            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                            <i class="bx bx-trophy text-xl"></i>
+                            <span>Lihat Turnamen</span>
+                        </a>
+                        <a href="#about"
+                            class="inline-flex items-center gap-2 border-2 border-blue-500 hover:bg-blue-500/10 text-blue-400 hover:text-blue-300 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
+                            <i class="bx bx-info-circle text-xl"></i>
+                            <span>Tentang Kami</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Image Grid & Carousel -->
+                <div class="space-y-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                    <!-- Carousel Section -->
+                    <div class="relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="bx bx-trophy text-yellow-400"></i>
+                            <span>Juara Di Turnamen Kami</span>
+                        </h3>
+
+                        <!-- Carousel Container -->
+                        <div
+                            class="relative bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/30 overflow-hidden">
+                            <div id="heroCarousel" class="relative h-64 overflow-hidden">
+                                <!-- Slide 1 -->
+                                <div class="carousel-slide absolute inset-0 transition-transform duration-500 ease-in-out"
+                                    style="transform: translateX(0%)">
+                                    <div
+                                        class="relative h-full bg-gradient-to-r from-yellow-900/20 to-orange-900/20 flex items-center justify-center">
+                                        <img src="./img/galeri/Juara 1 Road To Kemerdekaan 78.jpg"
+                                            alt="Tournament Winner 1" class="w-full h-full object-cover opacity-80" />
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30">
+                                        </div>
+
+                                        <!-- Badge dalam slide 1 -->
+                                        <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
+                                            <div
+                                                class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg">
+                                                <span>LBK ESPORT</span>
+                                            </div>
+                                            <div
+                                                class="bg-gradient-to-r from-yellow-600 to-yellow-400 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 shadow-lg">
+                                                <img src="./img/element/logo/ML Logo.png" alt="ML Logo"
+                                                    class="w-6 h-6 object-contain">
+                                                <span>JUARA 1 MLBB</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+                                            <div
+                                                class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-md font-semibold text-sm w-fit shadow-lg">
+                                                <span>Road To Kemerdekaan 78 | 2023</span>
+                                            </div>
+                                            <h4 class="text-xl font-bold text-white">Mobile Legends Bang Bang</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="carousel-slide absolute inset-0 transition-transform duration-500 ease-in-out"
+                                    style="transform: translateX(100%)">
+                                    <div
+                                        class="relative h-full bg-gradient-to-r from-blue-900/20 to-cyan-900/20 flex items-center justify-center">
+                                        <img src="./img/galeri/Juara 1 Road To Kemerdekaan 79.jpg"
+                                            alt="Tournament Winner 2" class="w-full h-full object-cover opacity-80" />
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30">
+                                        </div>
+
+                                        <!-- Badge dalam slide 2 -->
+                                        <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
+                                            <div
+                                                class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg">
+                                                <span>PALANRO B</span>
+                                            </div>
+                                            <div
+                                                class="bg-gradient-to-r from-yellow-600 to-yellow-400 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 shadow-lg">
+                                                <img src="./img/element/logo/ML Logo.png" alt="ML Logo"
+                                                    class="w-6 h-6 object-contain">
+                                                <span>JUARA 1 MLBB</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+                                            <div
+                                                class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-md font-semibold text-sm w-fit shadow-lg">
+                                                <span>Road To Kemerdekaan 79 | 2024</span>
+                                            </div>
+                                            <h4 class="text-xl font-bold text-white">Mobile Legends Bang Bang</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="carousel-slide absolute inset-0 transition-transform duration-500 ease-in-out"
+                                    style="transform: translateX(100%)">
+                                    <div
+                                        class="relative h-full bg-gradient-to-r from-purple-900/20 to-pink-900/20 flex items-center justify-center">
+                                        <img src="./img/galeri/Juara 1 Road To Kemerdekaan 80.jpg"
+                                            alt="Tournament Winner 3" class="w-full h-full object-cover opacity-80" />
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30">
+                                        </div>
+
+                                        <!-- Badge dalam slide 3 -->
+                                        <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
+                                            <div
+                                                class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg">
+                                                <span>SMAN 4 BARRU A</span>
+                                            </div>
+                                            <div
+                                                class="bg-gradient-to-r from-yellow-600 to-yellow-400 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 shadow-lg">
+                                                <img src="./img/element/logo/ML Logo.png" alt="ML Logo"
+                                                    class="w-6 h-6 object-contain">
+                                                <span>JUARA 1 MLBB</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+                                            <div
+                                                class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-md font-semibold text-sm w-fit shadow-lg">
+                                                <span>Road To Kemerdekaan 80 | 2025</span>
+                                            </div>
+                                            <h4 class="text-xl font-bold text-white">Mobile Legends Bang Bang</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Navigation -->
+                            <button id="prevSlide"
+                                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 hover:scale-110">
+                                <i class="bx bx-chevron-left text-xl"></i>
+                            </button>
+                            <button id="nextSlide"
+                                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 hover:scale-110">
+                                <i class="bx bx-chevron-right text-xl"></i>
+                            </button>
+
+                            <!-- Carousel Indicators - 3 SLIDES -->
+                            <div class="absolute bottom-4 right-4 flex gap-3" id="carouselIndicators">
+                                <div class="carousel-indicator w-3 h-3 bg-white/80 rounded-full transition-all duration-300 cursor-pointer"
+                                    data-slide="0"></div>
+                                <div class="carousel-indicator w-3 h-3 bg-white/40 rounded-full transition-all duration-300 cursor-pointer"
+                                    data-slide="1"></div>
+                                <div class="carousel-indicator w-3 h-3 bg-white/40 rounded-full transition-all duration-300 cursor-pointer"
+                                    data-slide="2"></div>
+                            </div>
+                        </div>
+
+                        <!-- Statistics Section -->
+                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                <i class="bx bx-bar-chart text-cyan-400"></i>
+                                <span>Statistik Komunitas</span>
+                            </h3>
+
+                            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                                <!-- Kategori Game -->
+                                <div class="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-4 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
+                                    <div class="flex items-center gap-3">
+                                        <i class="bx bx-game text-2xl text-blue-400"></i>
+                                        <div>
+                                            <p class="text-2xl font-bold text-white">5</p>
+                                            <p class="text-sm text-gray-300">Kategori Game</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Jumlah Turnamen -->
+                                <div class="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-4 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+                                    <div class="flex items-center gap-3">
+                                        <i class="bx bx-trophy text-2xl text-purple-400"></i>
+                                        <div>
+                                            <p class="text-2xl font-bold text-white">4</p>
+                                            <p class="text-sm text-gray-300">Jumlah Turnamen</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Jumlah Player -->
+                                <div class="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-4 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
+                                    <div class="flex items-center gap-3">
+                                        <i class="bx bx-group text-2xl text-green-400"></i>
+                                        <div>
+                                            <p class="text-2xl font-bold text-white">50+</p>
+                                            <p class="text-sm text-gray-300">Jumlah Player</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Juara Bertahan -->
+                                <div class="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 backdrop-blur-sm border border-yellow-500/30 rounded-xl p-4 hover:border-yellow-400/50 transition-all duration-300 hover:scale-105 col-span-2 lg:col-span-1">
+                                    <div class="flex items-center gap-3">
+                                        <i class="bx bx-crown text-2xl text-yellow-400"></i>
+                                        <div>
+                                            <p class="text-lg font-bold text-white">SMAN 4 Barru</p>
+                                            <p class="text-sm text-gray-300">Juara Bertahan</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Juara Terbanyak -->
+                                <div class="bg-gradient-to-br from-red-600/20 to-rose-600/20 backdrop-blur-sm border border-red-500/30 rounded-xl p-4 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
+                                    <div class="flex items-center gap-3">
+                                        <i class="bx bx-medal text-2xl text-red-400"></i>
+                                        <div>
+                                            <p class="text-lg font-bold text-white">PALANRO B</p>
+                                            <p class="text-sm text-gray-300">Juara Terbanyak (2)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Seleksi Porkab -->
+                                <div class="bg-gradient-to-br from-indigo-600/20 to-blue-600/20 backdrop-blur-sm border border-indigo-500/30 rounded-xl p-4 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105 col-span-2 lg:col-span-1">
+                                    <div class="flex items-center gap-3">
+                                        <i class="bx bx-info-circle text-2xl text-indigo-400"></i>
+                                        <div>
+                                            <p class="text-sm font-bold text-white">Seleksi Porkab</p>
+                                            <p class="text-xs text-gray-300">akan di infokan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Panjang - Mini League EFootball S1 -->
+                            <div class="mt-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                                <div class="bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 hover:scale-102">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-4">
+                                            <div class="bg-gradient-to-r from-blue-500 to-indigo-500 p-3 rounded-xl">
+                                                <i class="bx bx-football text-2xl text-white"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-xl font-bold text-white">Mini League EFootball S1</h4>
+                                                <p class="text-blue-300 font-medium">Turnamen Selanjutnya</p>
+                                                <p class="text-sm text-gray-300 mt-1">Tanggal Daftar: 20 Agustus - 29 Agustus 2025</p>
+                                            </div>
+                                        </div>
+                                        <div class="hidden md:flex items-center gap-2">
+                                            <div class="bg-green-500/20 border border-green-400/30 rounded-lg px-3 py-1">
+                                                <span class="text-green-300 text-xs font-semibold">COMING SOON</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="absolute top-20 right-10 w-20 h-20 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
+            <div class="absolute bottom-20 left-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-xl animate-pulse"
+                style="animation-delay: 1s"></div>
+    </section>
+
     <!-- JavaScript Libraries -->
     <!-- AOS - Animate On Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- FullCalendar JS -->
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+
     <!-- ApexCharts JS -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.min.js"></script>
-    
+
     <!-- Custom JavaScript -->
     <script src="js/index.js"></script>
-    
 </body>
+
 </html>
