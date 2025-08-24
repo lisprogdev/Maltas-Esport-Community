@@ -15,7 +15,7 @@
         -o-animation-duration: 20s;
     }
     
-    /* Mobile Menu Animation States */
+    /* Mobile Menu Animation States - Perfect Center */
     #navMenu {
         transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         transform: translateX(100%) !important;
@@ -25,6 +25,12 @@
         left: 0 !important;
         right: 0 !important;
         bottom: 0 !important;
+        padding: 2rem 1rem !important;
+        gap: 2rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
     #navMenu.mobile-menu-active {
@@ -39,11 +45,78 @@
         transform: translateX(100%) !important;
     }
     
-    /* Mobile Link Animations */
+    /* Mobile Link Animations - Beautiful Grid Layout */
     .mobile-nav-link {
         transform: translateY(30px);
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        width: 100% !important;
+        max-width: 170px !important;
+        min-height: 90px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 1rem 0.5rem !important;
+        font-size: 0.8rem !important;
+        gap: 0.5rem !important;
+        text-align: center !important;
+        border-radius: 1.25rem !important;
+        backdrop-filter: blur(10px) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .mobile-nav-link:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3) !important;
+    }
+    
+    /* Mobile Active Menu State */
+    .mobile-nav-link.active {
+        background: rgba(59, 130, 246, 0.8) !important;
+        border: 1px solid rgba(59, 130, 246, 0.6) !important;
+        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4) !important;
+    }
+    
+    .mobile-nav-link.active:hover {
+        background: rgba(59, 130, 246, 0.9) !important;
+        box-shadow: 0 12px 40px rgba(59, 130, 246, 0.5) !important;
+    }
+    
+    .mobile-nav-link i {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    .mobile-nav-link span {
+        font-size: 0.8rem !important;
+        font-weight: 600 !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    /* Mobile Navigation List - Perfect Center Grid */
+    #navMenu ul {
+        gap: 1rem 0.75rem !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        align-items: center !important;
+        justify-items: center !important;
+        justify-content: center !important;
+        align-content: center !important;
+        padding: 0 1rem !important;
+        margin: 0 auto !important;
+    }
+    
+    #navMenu li {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        max-width: 170px !important;
     }
     
     #navMenu.mobile-menu-active .mobile-nav-link {
@@ -55,6 +128,86 @@
     #navMenu.mobile-menu-active .mobile-nav-link:nth-child(2) { transition-delay: 0.2s; }
     #navMenu.mobile-menu-active .mobile-nav-link:nth-child(3) { transition-delay: 0.3s; }
     #navMenu.mobile-menu-active .mobile-nav-link:nth-child(4) { transition-delay: 0.4s; }
+    #navMenu.mobile-menu-active .mobile-nav-link:nth-child(5) { transition-delay: 0.5s; }
+    #navMenu.mobile-menu-active .mobile-nav-link:nth-child(6) { transition-delay: 0.6s; }
+    
+    /* Mobile Social Media Buttons - Perfect Center Alignment */
+    #navMenu .flex.flex-col.items-center {
+        gap: 0 0.75rem !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin-top: 0 !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        padding: 0 1rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        align-content: center !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center a {
+        width: 100% !important;
+        max-width: 170px !important;
+        min-height: 90px !important;
+        border-radius: 1.25rem !important;
+        font-size: 0.8rem !important;
+        font-weight: 600 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        text-align: center !important;
+        padding: 1rem 0.5rem !important;
+        backdrop-filter: blur(10px) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        /* Override HTML gradient backgrounds */
+        background: rgba(30, 41, 59, 0.8) !important;
+    }
+    
+    /* Instagram button specific styling */
+    #navMenu .flex.flex-col.items-center a[href*="instagram"] {
+        background: rgba(225, 29, 72, 0.2) !important;
+        border: 1px solid rgba(225, 29, 72, 0.3) !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center a[href*="instagram"]:hover {
+        background: rgba(225, 29, 72, 0.3) !important;
+        border: 1px solid rgba(225, 29, 72, 0.5) !important;
+        box-shadow: 0 12px 40px rgba(225, 29, 72, 0.3) !important;
+    }
+    
+    /* WhatsApp button specific styling */
+    #navMenu .flex.flex-col.items-center a[href*="whatsapp"] {
+        background: rgba(34, 197, 94, 0.2) !important;
+        border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center a[href*="whatsapp"]:hover {
+        background: rgba(34, 197, 94, 0.3) !important;
+        border: 1px solid rgba(34, 197, 94, 0.5) !important;
+        box-shadow: 0 12px 40px rgba(34, 197, 94, 0.3) !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center a:hover {
+        transform: scale(1.05) !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center a i {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    #navMenu .flex.flex-col.items-center a span {
+        font-size: 0.8rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.5px !important;
+    }
 }
 
     /* Hero Section Mobile */
@@ -79,9 +232,111 @@
         font-size: 0.75rem !important;
     }
     
-    .grid-cols-3 {
-        grid-template-columns: repeat(1, 1fr) !important;
+    /* Statistics Grid - Force Single Column Layout on Mobile */
+    .grid.grid-cols-2.lg\\:grid-cols-3,
+    .grid-cols-2.lg\\:grid-cols-3 {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
         gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    /* Override Tailwind default mobile behavior */
+    @media (max-width: 1023px) {
+        .lg\\:grid-cols-3 {
+            grid-template-columns: 1fr !important;
+        }
+    }
+    
+    /* Force all cards to same width */
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div,
+    .grid-cols-2.lg\\:grid-cols-3 > div {
+        grid-column: span 1 !important;
+        width: 100% !important;
+    }
+    
+    /* Statistics Cards Mobile Styling - Single Column */
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div {
+        padding: 1rem !important;
+        min-height: 90px !important;
+        display: flex !important;
+        width: 100% !important;
+    }
+    
+    /* Mobile statistics card content styling */
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div .flex {
+        flex-direction: row !important;
+        text-align: left !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+    }
+    
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div i {
+        font-size: 2rem !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div p:first-of-type {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+        font-weight: bold !important;
+    }
+    
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div p:last-of-type {
+        font-size: 0.875rem !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+        color: #9CA3AF !important;
+    }
+    
+    /* All cards now same width in single column */
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div.col-span-2,
+    .grid-cols-2.lg\\:grid-cols-3 > div.col-span-2 {
+        grid-column: span 1 !important;
+        width: 100% !important;
+    }
+    
+    /* Mini League Card Mobile */
+    .mt-6 > div {
+        padding: 1rem !important;
+    }
+    
+    .mt-6 > div .flex.items-center.justify-between {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: flex-start !important;
+    }
+    
+    .mt-6 > div .flex.items-center.gap-4 {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+    }
+    
+    .mt-6 > div .bg-gradient-to-r.from-blue-500 {
+        margin: 0 auto !important;
+    }
+    
+    .mt-6 > div h4 {
+        font-size: 1.125rem !important;
+        text-align: center !important;
+    }
+    
+    .mt-6 > div p {
+        text-align: center !important;
+        font-size: 0.875rem !important;
+    }
+    
+    .mt-6 > div .hidden.md\\:flex {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
     }
     
     .cta-buttons {
@@ -95,9 +350,54 @@
     }
 
 /* ====================================================
-   SMALL MOBILE DEVICES
+   SMALL MOBILE DEVICES - STATISTICS IMPROVEMENTS
    ==================================================== */
 @media (max-width: 480px) {
+    /* Statistics Grid - Compact single column for small screens */
+    .grid.grid-cols-2.lg\\:grid-cols-3,
+    .grid-cols-2.lg\\:grid-cols-3 {
+        gap: 0.75rem !important;
+        grid-template-columns: 1fr !important;
+        display: grid !important;
+    }
+    
+    /* Force all cards to same width on small screens */
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div,
+    .grid-cols-2.lg\\:grid-cols-3 > div {
+        grid-column: span 1 !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+    
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div {
+        padding: 0.75rem !important;
+        min-height: 80px !important;
+    }
+    
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div i {
+        font-size: 1.75rem !important;
+    }
+    
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div p:first-of-type {
+        font-size: 1.25rem !important;
+    }
+    
+    .grid.grid-cols-2.lg\\:grid-cols-3 > div p:last-of-type {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Mini League Card - Ultra compact */
+    .mt-6 > div {
+        padding: 0.75rem !important;
+    }
+    
+    .mt-6 > div h4 {
+        font-size: 1rem !important;
+    }
+    
+    .mt-6 > div p {
+        font-size: 0.8rem !important;
+    }
     .animate-marquee {
         animation-duration: 18s;
         -webkit-animation-duration: 18s;

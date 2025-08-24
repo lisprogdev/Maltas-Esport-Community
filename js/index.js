@@ -87,40 +87,103 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     /* ====================================================
-       NAVIGATION ACTIVE STATE MANAGEMENT
+       NAVIGATION ACTIVE STATE MANAGEMENT (SCROLL & CLICK BASED)
        ==================================================== */
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    const sections = document.querySelectorAll('section[id], div[id]');
+    let isScrolling = false;
     
-    // Set active link based on hash or default
-    function setActiveNavLink() {
-        const currentHash = window.location.hash || '#home';
-        
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentHash) {
-                // Remove active classes from all links
-                navLinks.forEach(l => {
-                    l.classList.remove('nav-link-active');
-                    l.classList.remove('bg-gradient-to-r', 'from-blue-600', 'to-blue-700');
-                    l.classList.add('nav-link');
-                });
-                
-                // Add active class to current link
-                link.classList.add('nav-link-active');
-                link.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-blue-700');
-                link.classList.remove('nav-link');
+    // Throttle function untuk performance
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
             }
-        });
+        }
     }
     
+    // Set active link berdasarkan section ID
+    function setActiveNavLink(activeId = null) {
+        let currentActiveId = activeId;
+        
+        // Jika tidak ada activeId yang diberikan, deteksi dari scroll position
+        if (!currentActiveId) {
+            const scrollPosition = window.scrollY + 100; // Offset untuk header
+            
+            // Cari section yang sedang dalam viewport
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = sections[i];
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentActiveId = section.id;
+                    break;
+                }
+            }
+            
+            // Default ke home jika tidak ada section yang cocok
+            if (!currentActiveId && window.scrollY < 200) {
+                currentActiveId = 'home';
+            }
+        }
+        
+        // Update semua navigation links
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            const linkId = href ? href.replace('#', '') : '';
+            
+            // Remove semua active classes
+            link.classList.remove('nav-link-active', 'active');
+            if (!link.classList.contains('mobile-nav-link')) {
+                link.classList.remove('bg-gradient-to-r', 'from-blue-600', 'to-blue-700');
+                link.classList.add('nav-link');
+            }
+            
+            // Add active class jika cocok dengan current section
+            if (linkId === currentActiveId) {
+                if (link.classList.contains('mobile-nav-link')) {
+                    // Mobile navigation
+                    link.classList.add('active');
+                } else {
+                    // Desktop navigation
+                    link.classList.add('nav-link-active');
+                    link.classList.remove('nav-link');
+                }
+            }
+        });
+        
+        // Update URL hash tanpa scroll
+        if (currentActiveId && !isScrolling) {
+            history.replaceState(null, null, `#${currentActiveId}`);
+        }
+    }
+    
+    // Scroll event listener dengan throttling
+    const handleScroll = throttle(() => {
+        if (!isScrolling) {
+            setActiveNavLink();
+        }
+    }, 100);
+    
+    window.addEventListener('scroll', handleScroll);
+    
     // Listen for hash changes
-    window.addEventListener('hashchange', setActiveNavLink);
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.replace('#', '');
+        setActiveNavLink(hash);
+    });
     
     // Set initial active state
     setActiveNavLink();
     
     /* ====================================================
-       SMOOTH SCROLLING FOR NAVIGATION LINKS
+       SMOOTH SCROLLING WITH ACTIVE STATE INTEGRATION
        ==================================================== */
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -133,51 +196,111 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetSection = document.getElementById(targetId);
                 
                 if (targetSection) {
+                    // Set scrolling flag
+                    isScrolling = true;
+                    
                     // Calculate offset for fixed navigation
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetSection.offsetTop - navHeight;
+                    const navHeight = document.querySelector('nav')?.offsetHeight || 80;
+                    const targetPosition = targetSection.offsetTop - navHeight - 20;
+                    
+                    // Immediately update active state
+                    setActiveNavLink(targetId);
                     
                     // Smooth scroll to target
                     window.scrollTo({
-                        top: targetPosition,
+                        top: Math.max(0, targetPosition),
                         behavior: 'smooth'
                     });
                     
-                    // Update URL hash
-                    history.pushState(null, null, href);
+                    // Reset scrolling flag after animation
+                    setTimeout(() => {
+                        isScrolling = false;
+                        // Double-check active state after scroll
+                        setActiveNavLink();
+                    }, 1000);
                     
-                    // Update active state
-                    setActiveNavLink();
-                } else {
-                    // If section doesn't exist, just scroll to top
+                    // Update URL hash
+                    history.replaceState(null, null, href);
+                } else if (targetId === 'home') {
+                    // Handle home link
+                    isScrolling = true;
+                    setActiveNavLink('home');
+                    
                     window.scrollTo({
                         top: 0,
                         behavior: 'smooth'
                     });
+                    
+                    setTimeout(() => {
+                        isScrolling = false;
+                    }, 1000);
+                    
+                    history.replaceState(null, null, '#home');
+                }
+                
+                // Close mobile menu if open
+                if (navMenu && navMenu.classList.contains('mobile-menu-active')) {
+                    navMenu.classList.remove('mobile-menu-active');
+                    navMenu.classList.add('translate-x-full');
+                    navMenu.classList.remove('translate-x-0');
+                    body.style.overflow = '';
+                    if (mobileMenuToggle) {
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.className = 'bx bx-menu';
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
                 }
             }
         });
     });
     
     /* ====================================================
-       LOGO CLICK TO TOP
+       LOGO CLICK TO TOP WITH ACTIVE STATE
        ==================================================== */
     const logo = document.querySelector('img[alt="Maltas Esports"]');
+    const brandElements = document.querySelectorAll('.brand-logo, .nav-brand');
+    
+    // Logo click handler
     if (logo) {
         logo.addEventListener('click', function() {
+            isScrolling = true;
+            setActiveNavLink('home');
+            
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
             
-            // Update hash and active state
-            history.pushState(null, null, '#home');
-            setActiveNavLink();
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000);
+            
+            history.replaceState(null, null, '#home');
         });
         
-        // Make logo clickable
         logo.style.cursor = 'pointer';
     }
+    
+    // Brand elements click handler
+    brandElements.forEach(brand => {
+        brand.addEventListener('click', function() {
+            isScrolling = true;
+            setActiveNavLink('home');
+            
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000);
+            
+            history.replaceState(null, null, '#home');
+        });
+        
+        brand.style.cursor = 'pointer';
+    });
     
     /* ====================================================
        KEYBOARD NAVIGATION SUPPORT
