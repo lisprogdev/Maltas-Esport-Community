@@ -1,0 +1,170 @@
+/* ====================================================
+   MALTAS ESPORTS COMMUNITY - NAVIGATION CSS
+   Semua styles untuk navigasi (desktop & mobile)
+   ==================================================== */
+
+/* ====================================================
+   NAVIGATION CONTAINER STYLES
+   ==================================================== */
+.nav-container {
+    position: relative;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
+    min-height: 80px;
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.nav-wrapper {
+    width: 100%;
+    min-height: 80px;
+    display: flex !important;
+}
+
+.nav-menu {
+    display: flex !important;
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-brand {
+    display: flex !important;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ====================================================
+   BRAND & LOGO STYLES
+   ==================================================== */
+.brand-name {
+    color: #FFD700 !important;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.brand-tagline {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* ====================================================
+   DESKTOP NAVIGATION STYLES
+   ==================================================== */
+.nav-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    background: rgba(59, 130, 246, 0.1);
+    color: rgb(96, 165, 250);
+    transform: translateY(-2px);
+}
+
+/* Desktop Navigation Active State */
+.nav-link-active {
+    background: linear-gradient(135deg, #3B82F6, #1D4ED8) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important;
+    transform: translateY(-1px) !important;
+    border: 1px solid rgba(59, 130, 246, 0.6) !important;
+}
+
+/* Desktop Navigation Hover States */
+.nav-link:hover:not(.nav-link-active) {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #60A5FA !important;
+    transform: scale(1.05) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+/* ====================================================
+   MOBILE MENU STATES
+   ==================================================== */
+.mobile-menu-active {
+    transform: translateX(0) !important;
+}
+
+/* Mobile Menu Debug Styles */
+#navMenu {
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+#navMenu.mobile-menu-active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Ensure mobile toggle is clickable and above menu */
+#mobileMenuToggle {
+    z-index: 9999 !important;
+    position: relative;
+    pointer-events: auto;
+}
+
+/* Mobile menu should be below toggle */
+#navMenu {
+    z-index: 9998 !important;
+}
+
+/* ====================================================
+   SOCIAL MEDIA BUTTONS
+   ==================================================== */
+.social-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ====================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ==================================================== */
+.nav-link:focus,
+.mobile-nav-link:focus {
+    outline: 2px solid rgb(59, 130, 246);
+    outline-offset: 2px;
+}
+
+/* ====================================================
+   PERFORMANCE OPTIMIZATIONS
+   ==================================================== */
+.nav-link,
+.mobile-nav-link,
+.social-btn {
+    will-change: transform, background-color, color;
+}
+
+/* ====================================================
+   REDUCED MOTION SUPPORT
+   ==================================================== */
+@media (prefers-reduced-motion: reduce) {
+    .nav-link,
+    .mobile-nav-link,
+    .social-btn {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+/* ====================================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ==================================================== */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link,
+    .mobile-nav-link,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}

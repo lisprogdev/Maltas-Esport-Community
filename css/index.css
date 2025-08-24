@@ -151,103 +151,10 @@
 }
 
 /* ====================================================
-   MOBILE MENU STATES
+   BODY BASE STYLES
    ==================================================== */
-.mobile-menu-active {
-    transform: translateX(0) !important;
-}
 
-/* Mobile Menu Debug Styles */
-#navMenu {
-    visibility: visible !important;
-    pointer-events: auto !important;
-}
 
-#navMenu.mobile-menu-active {
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-}
-
-/* Ensure mobile toggle is clickable and above menu */
-#mobileMenuToggle {
-    z-index: 9999 !important;
-    position: relative;
-    pointer-events: auto;
-}
-
-/* Mobile menu should be below toggle */
-#navMenu {
-    z-index: 9998 !important;
-}
-
-/* ====================================================
-   ENHANCED HOVER EFFECTS
-   ==================================================== */
-.nav-link:hover {
-    background: rgba(59, 130, 246, 0.1);
-    color: rgb(96, 165, 250);
-    transform: translateY(-2px);
-}
-
-/* Desktop Navigation Active State */
-.nav-link-active {
-    background: linear-gradient(135deg, #3B82F6, #1D4ED8) !important;
-    color: #FFFFFF !important;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important;
-    transform: translateY(-1px) !important;
-    border: 1px solid rgba(59, 130, 246, 0.6) !important;
-}
-
-/* Desktop Navigation Hover States */
-.nav-link:hover:not(.nav-link-active) {
-    background: rgba(59, 130, 246, 0.2) !important;
-    color: #60A5FA !important;
-    transform: scale(1.05) !important;
-    border: 1px solid rgba(59, 130, 246, 0.3) !important;
-}
-
-/* ====================================================
-   PERFORMANCE OPTIMIZATIONS
-   ==================================================== */
-.animate-marquee,
-.animate-slide-down,
-.animate-slide-left,
-.animate-slide-right,
-.animate-fade-up {
-    will-change: transform, opacity;
-}
-
-/* ====================================================
-   RESPONSIVE ADJUSTMENTS
-   ==================================================== */
-@media (max-width: 768px) {
-    .animate-marquee {
-        animation-duration: 20s;
-    }
-}
-
-/* ====================================================
-   REDUCED MOTION SUPPORT
-   ==================================================== */
-@media (prefers-reduced-motion: reduce) {
-    .animate-marquee,
-    .animate-slide-down,
-    .animate-slide-left,
-    .animate-slide-right,
-    .animate-fade-up {
-        animation: none !important;
-    }
-}
-
-/* ====================================================
-   ACCESSIBILITY IMPROVEMENTS
-   ==================================================== */
-.nav-link:focus,
-.mobile-nav-link:focus {
-    outline: 2px solid rgb(59, 130, 246);
-    outline-offset: 2px;
-}
 
 /* ====================================================
    BODY BASE STYLES
