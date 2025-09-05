@@ -69,42 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDateTime();
     setInterval(updateDateTime, 1000);
     
-    /* ====================================================
-       HERO SECTION FUNCTIONALITY
-       ==================================================== */
-    
-    // Date and Time Display
-    function updateDateTime() {
-        const now = new Date();
-        const options = {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
-        };
-        
-        const timeOptions = {
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false,
-            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
-        };
-        
-        const dateElement = document.getElementById('currentDate');
-        const timeElement = document.getElementById('currentTime');
-        
-        if (dateElement && timeElement) {
-            dateElement.textContent = now.toLocaleDateString('id-ID', options);
-            timeElement.textContent = now.toLocaleTimeString('id-ID', timeOptions);
-        }
-    }
-    
-    // Update time every second
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
-    
     // Hero Carousel Functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
