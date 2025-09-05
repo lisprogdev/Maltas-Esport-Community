@@ -222,3 +222,365 @@
         font-size: 0.75rem;
     }
 }
+
+/* ====================================================
+   ABOUT US SECTION MOBILE STYLES
+   ==================================================== */
+@media (max-width: 768px) {
+    /* About Us Mobile Layout */
+    #about .grid.lg\\:grid-cols-3 {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    /* Section Header Mobile */
+    #about h2 {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+    }
+
+    #about p {
+        font-size: 1.125rem !important;
+    }
+
+    /* Left Column - Image Mobile */
+    #about .lg\\:col-span-1:first-child {
+        order: 1 !important;
+        text-align: center !important;
+    }
+
+    #about .lg\\:col-span-1:first-child img {
+        max-width: 200px !important;
+        margin: 0 auto !important;
+    }
+
+    /* Middle Column - Vision & Mission Mobile */
+    #about .lg\\:col-span-1:nth-child(2) {
+        order: 2 !important;
+    }
+
+    #about .lg\\:col-span-1:nth-child(2) .space-y-8 {
+        gap: 1.5rem !important;
+    }
+
+    #about .lg\\:col-span-1:nth-child(2) h3 {
+        font-size: 1.5rem !important;
+    }
+
+    #about .lg\\:col-span-1:nth-child(2) p,
+    #about .lg\\:col-span-1:nth-child(2) li {
+        font-size: 0.875rem !important;
+    }
+
+    /* Right Column - Timeline Mobile */
+    #about .lg\\:col-span-1:last-child {
+        order: 3 !important;
+    }
+
+    #about .lg\\:col-span-1:last-child h3 {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    #about .lg\\:col-span-1:last-child .space-y-8 {
+        gap: 1.5rem !important;
+    }
+
+    #about .lg\\:col-span-1:last-child h4 {
+        font-size: 1.125rem !important;
+    }
+
+    #about .lg\\:col-span-1:last-child p {
+        font-size: 0.875rem !important;
+    }
+
+    /* Bottom CTA Mobile */
+    #about .text-center.mt-16 {
+        margin-top: 2rem !important;
+    }
+
+    #about .text-center.mt-16 .inline-flex {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        padding: 1rem !important;
+        text-align: center !important;
+    }
+
+    #about .text-center.mt-16 span {
+        font-size: 0.875rem !important;
+    }
+
+    /* Game Logos Section Mobile */
+    #about .text-center.mt-16 h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Mobile Horizontal Scroll for Game Logos */
+    #about .md\\:hidden.overflow-x-auto {
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59, 130, 246, 0.5) rgba(30, 41, 59, 0.3) !important;
+    }
+
+    #about .md\\:hidden.overflow-x-auto::-webkit-scrollbar {
+        height: 6px !important;
+    }
+
+    #about .md\\:hidden.overflow-x-auto::-webkit-scrollbar-track {
+        background: rgba(30, 41, 59, 0.3) !important;
+        border-radius: 3px !important;
+    }
+
+    #about .md\\:hidden.overflow-x-auto::-webkit-scrollbar-thumb {
+        background: rgba(59, 130, 246, 0.5) !important;
+        border-radius: 3px !important;
+    }
+
+    #about .md\\:hidden .flex.gap-4 {
+        display: flex !important;
+        gap: 1rem !important;
+        padding: 0 1rem 1rem 1rem !important;
+        min-width: max-content !important;
+        width: auto !important;
+    }
+
+    #about .md\\:hidden .flex-shrink-0 {
+        flex-shrink: 0 !important;
+        width: 80px !important;
+        min-width: 80px !important;
+    }
+
+    #about .md\\:hidden .game-logo-card {
+        width: 80px !important;
+        min-width: 80px !important;
+        padding: 0.75rem !important;
+        background: rgba(75, 85, 99, 0.3) !important;
+        border: 2px solid rgba(107, 114, 128, 0.5) !important;
+        border-radius: 1rem !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #about .md\\:hidden .game-logo-card:hover {
+        background: rgba(59, 130, 246, 0.2) !important;
+        border-color: rgba(59, 130, 246, 0.5) !important;
+        transform: scale(1.05) !important;
+    }
+
+    #about .md\\:hidden .game-logo-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    #about .md\\:hidden .game-logo-container img {
+        width: 3rem !important;
+        height: 3rem !important;
+        margin: 0 auto !important;
+        object-fit: contain !important;
+        filter: grayscale(100%) brightness(0.8) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #about .md\\:hidden .game-logo-card:hover img {
+        filter: grayscale(0%) brightness(1) !important;
+        transform: scale(1.1) !important;
+    }
+
+    #about .md\\:hidden .game-logo-container p {
+        font-size: 0.7rem !important;
+        color: #9CA3AF !important;
+        margin-top: 0.5rem !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+        transition: color 0.3s ease !important;
+    }
+
+    #about .md\\:hidden .game-logo-card:hover p {
+        color: #60A5FA !important;
+    }
+
+    /* Scroll Indicator Mobile */
+    #about .md\\:hidden .text-gray-400 {
+        font-size: 0.75rem !important;
+        color: #9CA3AF !important;
+        margin-top: 1rem !important;
+    }
+}
+
+/* ====================================================
+   SMALL MOBILE DEVICES - ABOUT US IMPROVEMENTS
+   ==================================================== */
+@media (max-width: 480px) {
+    /* About Us Ultra Compact */
+    #about .py-20 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    #about .mb-16 {
+        margin-bottom: 2rem !important;
+    }
+
+    #about h2 {
+        font-size: 2rem !important;
+    }
+
+    #about p {
+        font-size: 1rem !important;
+    }
+
+    /* Timeline Compact */
+    #about .lg\\:col-span-1:last-child .space-y-8 {
+        gap: 1rem !important;
+    }
+
+    #about .lg\\:col-span-1:last-child .w-12.h-12 {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+
+    #about .lg\\:col-span-1:last-child .w-12.h-12 span {
+        font-size: 0.75rem !important;
+    }
+
+    #about .lg\\:col-span-1:last-child h4 {
+        font-size: 1rem !important;
+    }
+
+    #about .lg\\:col-span-1:last-child p {
+        font-size: 0.8rem !important;
+    }
+
+    /* Game Logos Section Small Mobile */
+    #about .text-center.mt-16 h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Small Mobile Horizontal Scroll Adjustments */
+    #about .md\\:hidden .flex-shrink-0 {
+        width: 70px !important;
+        min-width: 70px !important;
+    }
+
+    #about .md\\:hidden .game-logo-card {
+        width: 70px !important;
+        min-width: 70px !important;
+        padding: 0.5rem !important;
+    }
+
+    #about .md\\:hidden .game-logo-container img {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+
+    #about .md\\:hidden .game-logo-container p {
+        font-size: 0.65rem !important;
+        margin-top: 0.375rem !important;
+    }
+
+    #about .md\\:hidden .flex.gap-4 {
+        gap: 0.75rem !important;
+        padding: 0 0.75rem 0.75rem 0.75rem !important;
+    }
+
+    #about .md\\:hidden .text-gray-400 {
+        font-size: 0.7rem !important;
+    }
+
+    /* Mobile Achievements Tabs */
+    #achievements .lg\\:hidden .overflow-x-auto {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59, 130, 246, 0.5) rgba(30, 41, 59, 0.3) !important;
+    }
+
+    #achievements .lg\\:hidden .overflow-x-auto::-webkit-scrollbar {
+        height: 6px !important;
+    }
+
+    #achievements .lg\\:hidden .overflow-x-auto::-webkit-scrollbar-track {
+        background: rgba(30, 41, 59, 0.3) !important;
+        border-radius: 3px !important;
+    }
+
+    #achievements .lg\\:hidden .overflow-x-auto::-webkit-scrollbar-thumb {
+        background: rgba(59, 130, 246, 0.5) !important;
+        border-radius: 3px !important;
+    }
+
+    #achievements .lg\\:hidden .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+        background: rgba(59, 130, 246, 0.7) !important;
+    }
+
+    /* Mobile Game Tabs */
+    #achievements .lg\\:hidden .game-tab {
+        min-width: 80px !important;
+        flex-shrink: 0 !important;
+    }
+
+    #achievements .lg\\:hidden .game-tab.active {
+        background: rgba(59, 130, 246, 0.2) !important;
+        border-color: rgba(59, 130, 246, 0.5) !important;
+    }
+
+    /* Mobile Tournament Cards */
+    #achievements .lg\\:hidden .min-w-\\[280px\\] {
+        min-width: 280px !important;
+    }
+
+    /* Mobile Tournament Tabs */
+    #tournaments .lg\\:hidden .overflow-x-auto {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59, 130, 246, 0.5) rgba(30, 41, 59, 0.3) !important;
+    }
+
+    #tournaments .lg\\:hidden .overflow-x-auto::-webkit-scrollbar {
+        height: 6px !important;
+    }
+
+    #tournaments .lg\\:hidden .overflow-x-auto::-webkit-scrollbar-track {
+        background: rgba(30, 41, 59, 0.3) !important;
+        border-radius: 3px !important;
+    }
+
+    #tournaments .lg\\:hidden .overflow-x-auto::-webkit-scrollbar-thumb {
+        background: rgba(59, 130, 246, 0.5) !important;
+        border-radius: 3px !important;
+    }
+
+    #tournaments .lg\\:hidden .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+        background: rgba(59, 130, 246, 0.7) !important;
+    }
+
+    #tournaments .lg\\:hidden .flex.gap-3 {
+        white-space: nowrap !important;
+        min-width: max-content !important;
+    }
+
+    #tournaments .lg\\:hidden .flex-shrink-0 {
+        width: 100px !important;
+        min-width: 100px !important;
+        height: auto !important;
+    }
+
+    /* Tournament Tab Active States */
+    .tournament-tab.active {
+        background: rgba(59, 130, 246, 0.2) !important;
+        border-color: rgba(59, 130, 246, 0.5) !important;
+    }
+
+    .tournament-tab:hover {
+        background: rgba(59, 130, 246, 0.1) !important;
+        border-color: rgba(59, 130, 246, 0.3) !important;
+    }
+}

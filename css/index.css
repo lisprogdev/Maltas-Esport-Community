@@ -151,6 +151,244 @@
 }
 
 /* ====================================================
+   GAME LOGOS ENHANCEMENTS
+   ==================================================== */
+
+/* Mobile Legends Logo Specific Styling */
+.game-logo-ml {
+    filter: grayscale(100%) brightness(0.8) contrast(1.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Force center alignment */
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.game-logo-ml:hover {
+    filter: grayscale(0%) brightness(1) contrast(1);
+    transform: scale(1.05);
+}
+
+/* Game Logo Container Centering */
+.game-logo-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* Game Logo Cards Enhancement */
+.game-logo-card {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ====================================================
+   PRESTASI SECTION STYLES
+   ==================================================== */
+.game-tab {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    color: #94a3b8;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-tab:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #60a5fa;
+    transform: translateY(-2px);
+}
+
+.game-tab.active {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.8);
+    color: #60a5fa;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.game-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Trophy and Medal Icons */
+.trophy-icon {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.medal-icon {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Sidebar Styling */
+.game-tab img {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.game-tab:hover img {
+    filter: brightness(1) invert(0);
+    transform: scale(1.1);
+}
+
+.game-tab.active img {
+    filter: brightness(1) invert(0);
+    transform: scale(1.1);
+}
+
+/* Horizontal Scrolling */
+.overflow-x-auto {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(59, 130, 246, 0.5) rgba(30, 41, 59, 0.3);
+    -webkit-overflow-scrolling: touch;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+    height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.3);
+    border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.5);
+    border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.7);
+}
+
+/* Game Logos Mobile Horizontal Scroll Enhancement */
+@media (max-width: 768px) {
+    .md\\:hidden.overflow-x-auto {
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+    }
+
+    .md\\:hidden .flex.gap-4 {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 1rem !important;
+        min-width: max-content !important;
+        width: auto !important;
+        padding: 0 1rem 1rem 1rem !important;
+    }
+
+    .md\\:hidden .flex-shrink-0 {
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        width: 80px !important;
+        min-width: 80px !important;
+        max-width: 80px !important;
+    }
+
+    .md\\:hidden .game-logo-card.w-20 {
+        width: 80px !important;
+        min-width: 80px !important;
+        max-width: 80px !important;
+        height: auto !important;
+    }
+}
+
+/* Tournament Card Hover Effects */
+.tournament-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tournament-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Achievement Counter Badges */
+.achievement-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive Sidebar Layout */
+@media (max-width: 768px) {
+    .flex.gap-8 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .w-24.lg\\:w-32 {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .game-tab {
+        aspect-ratio: auto;
+        padding: 1rem;
+        min-height: 80px;
+    }
+    
+    .game-tab img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-tab {
+        padding: 0.75rem;
+        min-height: 70px;
+    }
+    
+    .game-tab img {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    
+    .min-w-300px {
+        min-width: 280px;
+    }
+}
+
+/* Sidebar Height Matching Content */
+.sidebar-container {
+    height: fit-content;
+}
+
+.sidebar-container .bg-slate-800\\/50 {
+    height: 100%;
+    min-height: 100%;
+}
+
+/* ====================================================
    BODY BASE STYLES
    ==================================================== */
 body {
@@ -158,4 +396,55 @@ body {
     font-family: 'Rajdhani', sans-serif;
     color: white;
     overflow-x: hidden;
+}
+
+/* ====================================================
+   MODAL STYLES
+   ==================================================== */
+
+#termsModal {
+    transition: all 0.2s ease-in-out;
+}
+
+#termsModal .bg-gradient-to-br {
+    transition: all 0.3s ease;
+}
+
+#termsModal button:hover {
+    transform: translateY(-2px);
+}
+
+#termsModal a:hover {
+    transform: translateY(-2px);
+}
+
+/* Modal Animation Classes */
+.modal-fade-in {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-fade-out {
+    animation: modalFadeOut 0.2s ease-in;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
 }

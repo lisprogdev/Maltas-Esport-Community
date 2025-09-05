@@ -76,13 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prevSlide');
     const nextButton = document.getElementById('nextSlide');
     
-    console.clear();
-    console.log('🎯 CAROUSEL DEBUG INFO - 3 SLIDES:');
-    console.log('Number of slides detected:', slides.length);
-    console.log('Number of indicators detected:', indicators.length);
-    console.log('Expected: 3 slides, 3 indicators');
-    console.log('Slides:', slides);
-    console.log('Indicators:', indicators);
+
 
     
     function showSlide(index) {
@@ -175,16 +169,128 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', function() {
             AOS.refresh();
         });
-        
-        console.log('🎯 AOS Animations Initialized Successfully!');
-    } else {
-        console.warn('⚠️ AOS library not loaded');
     }
+    
+
     
     /* ====================================================
        INITIALIZE COMPLETE
        ==================================================== */
-    console.log('🎮 Maltas Esports Community - All Systems Loaded!');
+    
+});
+
+/* ====================================================
+   MODAL FUNCTIONS
+   ==================================================== */
+
+// Function to open Terms & Conditions Modal
+function openTermsModal() {
+    const modal = document.getElementById('termsModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        
+        // Add fade-in animation
+        modal.style.opacity = '0';
+        modal.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+            modal.style.opacity = '1';
+            modal.style.transform = 'scale(1)';
+        }, 10);
+    }
+}
+
+// Function to close Terms & Conditions Modal
+function closeTermsModal() {
+    const modal = document.getElementById('termsModal');
+    if (modal) {
+        // Add fade-out animation
+        modal.style.opacity = '0';
+        modal.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 200);
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('termsModal');
+    if (modal && e.target === modal) {
+        closeTermsModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeTermsModal();
+    }
+});
+
+/* ====================================================
+   IMAGE MODAL FUNCTIONS
+   ==================================================== */
+
+// Function to open image modal
+function openImageModal(imageSrc, imageTitle) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    
+    if (modal && modalImage && modalTitle) {
+        modalImage.src = imageSrc;
+        modalImage.alt = imageTitle;
+        modalTitle.textContent = imageTitle;
+        
+        // Show modal with animation
+        modal.classList.remove('hidden');
+        modal.style.opacity = '0';
+        modal.style.transform = 'scale(0.95)';
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+        
+        // Animate in
+        setTimeout(() => {
+            modal.style.opacity = '1';
+            modal.style.transform = 'scale(1)';
+        }, 10);
+    }
+}
+
+// Function to close image modal
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    
+    if (modal) {
+        // Add fade-out animation
+        modal.style.opacity = '0';
+        modal.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 200);
+    }
+}
+
+// Close image modal when clicking outside
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('imageModal');
+    if (modal && e.target === modal) {
+        closeImageModal();
+    }
+});
+
+// Close image modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeImageModal();
+    }
 });
 
 /* ====================================================
@@ -228,4 +334,99 @@ if (!('scrollBehavior' in document.documentElement.style)) {
     
     // Override smooth scroll behavior
     window.smoothScrollTo = smoothScrollPolyfill;
+}
+
+/* ====================================================
+   GAME TAB FUNCTIONALITY
+   ==================================================== */
+function showGameTab(gameId) {
+    // Hide all desktop game content
+    const allDesktopContent = document.querySelectorAll('.game-content:not([id$="-mobile"])');
+    allDesktopContent.forEach(content => {
+        content.classList.remove('active');
+        content.classList.add('hidden');
+    });
+    
+    // Hide all mobile game content
+    const allMobileContent = document.querySelectorAll('.game-content[id$="-mobile"]');
+    allMobileContent.forEach(content => {
+        content.classList.remove('active');
+        content.classList.add('hidden');
+    });
+    
+    // Remove active class from all desktop tabs
+    const allDesktopTabs = document.querySelectorAll('.game-tab:not(.lg\\:hidden .game-tab)');
+    allDesktopTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Remove active class from all mobile tabs
+    const allMobileTabs = document.querySelectorAll('.lg\\:hidden .game-tab');
+    allMobileTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Show selected desktop game content
+    const selectedDesktopContent = document.getElementById(gameId + '-content');
+    if (selectedDesktopContent) {
+        selectedDesktopContent.classList.remove('hidden');
+        selectedDesktopContent.classList.add('active');
+    }
+    
+    // Show selected mobile game content
+    const selectedMobileContent = document.getElementById(gameId + '-content-mobile');
+    if (selectedMobileContent) {
+        selectedMobileContent.classList.remove('hidden');
+        selectedMobileContent.classList.add('active');
+    }
+    
+    // Add active class to selected desktop tab
+    const selectedDesktopTab = document.querySelector(`[data-game="${gameId}"]:not(.lg\\:hidden [data-game="${gameId}"])`);
+    if (selectedDesktopTab) {
+        selectedDesktopTab.classList.add('active');
+    }
+    
+    // Add active class to selected mobile tab
+    const selectedMobileTab = document.querySelector(`.lg\\:hidden [data-game="${gameId}"]`);
+    if (selectedMobileTab) {
+        selectedMobileTab.classList.add('active');
+    }
+}
+
+/* ====================================================
+   TOURNAMENT TAB FUNCTIONALITY
+   ==================================================== */
+function showTournamentTab(tournamentId) {
+    // Hide all tournament content
+    const allContent = document.querySelectorAll('.tournament-content');
+    allContent.forEach(content => {
+        content.classList.remove('active');
+        content.classList.add('hidden');
+    });
+    
+    // Remove active class from all tabs
+    const allTabs = document.querySelectorAll('.tournament-tab');
+    allTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Show selected tournament content
+    const selectedContent = document.getElementById(tournamentId + '-content');
+    if (selectedContent) {
+        selectedContent.classList.remove('hidden');
+        selectedContent.classList.add('active');
+    }
+    
+    // Show selected tournament content for mobile
+    const selectedContentMobile = document.getElementById(tournamentId + '-content-mobile');
+    if (selectedContentMobile) {
+        selectedContentMobile.classList.remove('hidden');
+        selectedContentMobile.classList.add('active');
+    }
+    
+    // Add active class to selected tab
+    const selectedTab = document.querySelector(`[data-tournament="${tournamentId}"]`);
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
 }
