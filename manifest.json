@@ -1,0 +1,92 @@
+{
+  "name": "Maltas Esport Community",
+  "short_name": "Maltas Esport",
+  "description": "Komunitas esports terdepan di Mallusetasi, Barru, Sulawesi Selatan. Turnamen Mobile Legends, Free Fire, dan E-Football.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["games", "entertainment", "sports"],
+  "icons": [
+    {
+      "src": "img/element/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "img/element/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "img/element/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "img/element/logo/Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img/element/logo/Logo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Maltas Esport Community Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Turnamen",
+      "short_name": "Tournament",
+      "description": "Lihat daftar turnamen esports",
+      "url": "/#tournaments",
+      "icons": [
+        {
+          "src": "img/element/logo/Logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Galeri",
+      "short_name": "Gallery",
+      "description": "Lihat galeri foto komunitas",
+      "url": "/#gallery",
+      "icons": [
+        {
+          "src": "img/element/logo/Logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Kontak",
+      "short_name": "Contact",
+      "description": "Hubungi kami",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "img/element/logo/Logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}

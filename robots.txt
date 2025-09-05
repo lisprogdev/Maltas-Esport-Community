@@ -1,0 +1,57 @@
+# Robots.txt untuk Maltas Esport Community
+# Website: https://maltasesport.my.id
+# Dibuat: 19 Desember 2024
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://maltasesport.my.id/sitemap.xml
+
+# Direktori yang diizinkan untuk di-crawl
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /img/element/
+Allow: /img/turnamen/
+Allow: /img/gallery/
+
+# File yang diblokir dari crawling
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.log$
+Disallow: /*.tmp$
+Disallow: /*.bak$
+
+# Crawl delay untuk menghindari overload server
+Crawl-delay: 1
+
+# Specific rules untuk search engines utama
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Blokir bot yang tidak diinginkan
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Host directive
+Host: maltasesport.my.id
