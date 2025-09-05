@@ -23,6 +23,8 @@
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
+        z-index: 9998 !important;
+        position: fixed !important;
     }
     
     #navMenu.mobile-menu-active {
@@ -35,6 +37,14 @@
     
     #navMenu.translate-x-full {
         transform: translateX(100%) !important;
+    }
+    
+    /* Ensure mobile menu is visible when active */
+    #navMenu.translate-x-0 {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
     }
     
     /* Mobile Link Animations - Beautiful Grid Layout */
@@ -187,6 +197,386 @@
         font-size: 0.8rem !important;
         line-height: 1.2 !important;
         letter-spacing: 0.5px !important;
+    }
+    
+    /* Mobile Menu Toggle Button */
+    #mobileMenuToggle {
+        z-index: 9999 !important;
+        position: relative !important;
+        pointer-events: auto !important;
+    }
+    
+    /* Force mobile menu visibility */
+    @media (max-width: 768px) {
+        #navMenu {
+            display: flex !important;
+        }
+        
+        #navMenu.translate-x-0 {
+            display: flex !important;
+        }
+        
+        /* Override any conflicting styles */
+        #navMenu.md\\:hidden {
+            display: flex !important;
+        }
+        
+        /* Ensure mobile menu is always visible when active */
+        #navMenu.translate-x-0.md\\:hidden {
+            display: flex !important;
+        }
+        
+        /* Override Tailwind's hidden class when menu is active */
+        #navMenu.translate-x-0 {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Force mobile menu to be visible on mobile devices */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+            }
+        }
+        
+        /* Override any conflicting display properties */
+        #navMenu[class*="hidden"] {
+            display: flex !important;
+        }
+        
+        /* Ensure mobile menu is always visible when active */
+        #navMenu.translate-x-0[class*="hidden"] {
+            display: flex !important;
+        }
+        
+        /* Override Tailwind's md:hidden class */
+        #navMenu.md\\:hidden {
+            display: flex !important;
+        }
+        
+        #navMenu.translate-x-0.md\\:hidden {
+            display: flex !important;
+        }
+        
+        /* Force mobile menu visibility with highest specificity */
+        @media (max-width: 768px) {
+            #navMenu.md\\:hidden {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0.md\\:hidden {
+                display: flex !important;
+            }
+        }
+        
+        /* Override any conflicting styles with maximum specificity */
+        @media (max-width: 768px) {
+            #navMenu[class*="md:hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="md:hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Final override for mobile menu visibility */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+        }
+        
+        /* Override Tailwind's hidden class completely */
+        @media (max-width: 768px) {
+            #navMenu.hidden {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0.hidden {
+                display: flex !important;
+            }
+        }
+        
+        /* Ultimate override for mobile menu */
+        @media (max-width: 768px) {
+            #navMenu[class*="hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Force mobile menu to be visible regardless of any class */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override any conflicting styles with maximum specificity */
+        @media (max-width: 768px) {
+            #navMenu[class*="md:hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="md:hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Final override for mobile menu visibility */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override Tailwind's hidden class completely */
+        @media (max-width: 768px) {
+            #navMenu.hidden {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0.hidden {
+                display: flex !important;
+            }
+        }
+        
+        /* Ultimate override for mobile menu */
+        @media (max-width: 768px) {
+            #navMenu[class*="hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Force mobile menu to be visible regardless of any class */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override any conflicting styles with maximum specificity */
+        @media (max-width: 768px) {
+            #navMenu[class*="md:hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="md:hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Final override for mobile menu visibility */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override Tailwind's hidden class completely */
+        @media (max-width: 768px) {
+            #navMenu.hidden {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0.hidden {
+                display: flex !important;
+            }
+        }
+        
+        /* Ultimate override for mobile menu */
+        @media (max-width: 768px) {
+            #navMenu[class*="hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Force mobile menu to be visible regardless of any class */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override any conflicting styles with maximum specificity */
+        @media (max-width: 768px) {
+            #navMenu[class*="md:hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="md:hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Final override for mobile menu visibility */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override Tailwind's hidden class completely */
+        @media (max-width: 768px) {
+            #navMenu.hidden {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0.hidden {
+                display: flex !important;
+            }
+        }
+        
+        /* Ultimate override for mobile menu */
+        @media (max-width: 768px) {
+            #navMenu[class*="hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Force mobile menu to be visible regardless of any class */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override any conflicting styles with maximum specificity */
+        @media (max-width: 768px) {
+            #navMenu[class*="md:hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="md:hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Final override for mobile menu visibility */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override Tailwind's hidden class completely */
+        @media (max-width: 768px) {
+            #navMenu.hidden {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0.hidden {
+                display: flex !important;
+            }
+        }
+        
+        /* Ultimate override for mobile menu */
+        @media (max-width: 768px) {
+            #navMenu[class*="hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Force mobile menu to be visible regardless of any class */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override any conflicting styles with maximum specificity */
+        @media (max-width: 768px) {
+            #navMenu[class*="md:hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="md:hidden"] {
+                display: flex !important;
+            }
+        }
+        
+        /* Final override for mobile menu visibility */
+        @media (max-width: 768px) {
+            #navMenu {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+        
+        /* Override Tailwind's hidden class completely */
+        @media (max-width: 768px) {
+            #navMenu.hidden {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0.hidden {
+                display: flex !important;
+            }
+        }
+        
+        /* Ultimate override for mobile menu */
+        @media (max-width: 768px) {
+            #navMenu[class*="hidden"] {
+                display: flex !important;
+            }
+            
+            #navMenu.translate-x-0[class*="hidden"] {
+                display: flex !important;
+            }
+        }
     }
 }
 

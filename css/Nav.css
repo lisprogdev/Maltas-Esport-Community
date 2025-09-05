@@ -72,7 +72,7 @@
     transform: translateX(0) !important;
 }
 
-/* Mobile Menu Debug Styles */
+/* Mobile Menu Styles */
 #navMenu {
     visibility: visible !important;
     pointer-events: auto !important;
@@ -94,6 +94,7 @@
 /* Mobile menu should be below toggle */
 #navMenu {
     z-index: 9998 !important;
+    position: fixed !important;
 }
 
 /* ====================================================

@@ -18,20 +18,26 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             e.stopPropagation();
             
-           
+            // Toggle mobile menu classes
             navMenu.classList.toggle('translate-x-0');
             navMenu.classList.toggle('translate-x-full');
+            navMenu.classList.toggle('mobile-menu-active');
             
-           
+            // Toggle body overflow
+            if (navMenu.classList.contains('translate-x-0')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
             
             // Update toggle button icon
             const icon = this.querySelector('i');
-            if (navMenu.classList.contains('mobile-menu-active')) {
-                icon.className = 'bx bx-x';
+            if (navMenu.classList.contains('translate-x-0')) {
+                icon.className = 'bx bx-x text-2xl';
                 this.setAttribute('aria-expanded', 'true');
                 this.setAttribute('aria-label', 'Tutup menu');
             } else {
-                icon.className = 'bx bx-menu';
+                icon.className = 'bx bx-menu text-2xl';
                 this.setAttribute('aria-expanded', 'false');
                 this.setAttribute('aria-label', 'Buka menu');
             }
@@ -46,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.classList.remove('translate-x-0');
                 body.style.overflow = '';
                 const icon = mobileMenuToggle.querySelector('i');
-                icon.className = 'bx bx-menu';
+                icon.className = 'bx bx-menu text-2xl';
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 mobileMenuToggle.setAttribute('aria-label', 'Buka menu');
             });
@@ -60,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.classList.remove('translate-x-0');
                 body.style.overflow = '';
                 const icon = mobileMenuToggle.querySelector('i');
-                icon.className = 'bx bx-menu';
+                icon.className = 'bx bx-menu text-2xl';
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 mobileMenuToggle.setAttribute('aria-label', 'Buka menu');
             }
@@ -74,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.classList.remove('translate-x-0');
                 body.style.overflow = '';
                 const icon = mobileMenuToggle.querySelector('i');
-                icon.className = 'bx bx-menu';
+                icon.className = 'bx bx-menu text-2xl';
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 mobileMenuToggle.setAttribute('aria-label', 'Buka menu');
             }
@@ -122,14 +128,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Close mobile menu if open
-                if (navMenu && navMenu.classList.contains('mobile-menu-active')) {
+                if (navMenu && navMenu.classList.contains('translate-x-0')) {
                     navMenu.classList.remove('mobile-menu-active');
                     navMenu.classList.add('translate-x-full');
                     navMenu.classList.remove('translate-x-0');
                     body.style.overflow = '';
                     if (mobileMenuToggle) {
                         const icon = mobileMenuToggle.querySelector('i');
-                        icon.className = 'bx bx-menu';
+                        icon.className = 'bx bx-menu text-2xl';
                         mobileMenuToggle.setAttribute('aria-expanded', 'false');
                     }
                 }
@@ -176,14 +182,14 @@ document.addEventListener('DOMContentLoaded', function() {
        ==================================================== */
     document.addEventListener('keydown', function(e) {
         // Escape key to close mobile menu
-        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('mobile-menu-active')) {
+        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('translate-x-0')) {
             navMenu.classList.remove('mobile-menu-active');
             navMenu.classList.add('translate-x-full');
             navMenu.classList.remove('translate-x-0');
             body.style.overflow = '';
             if (mobileMenuToggle) {
                 const icon = mobileMenuToggle.querySelector('i');
-                icon.className = 'bx bx-menu';
+                icon.className = 'bx bx-menu text-2xl';
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 mobileMenuToggle.focus(); // Return focus to toggle button
             }
